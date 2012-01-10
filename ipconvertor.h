@@ -18,13 +18,11 @@
  * get methods for each are provided and return a c++ string
  */
 
-#ifndef IPCONVERTOR_H_
-#define IPCONVERTOR_H_
+#pragma once
 
 #include <iostream>
 #include <string>
 #include <arpa/inet.h> //for inet_aton(), htonl(), ntohl()
-#include <stdio.h>
 #include <sstream>
 
 using namespace std;
@@ -71,5 +69,3 @@ public:
     string b_gethostmin(){ return addr2bin(hostmin); };
     string b_gethostmax(){ return addr2bin(hostmax); };
 };
-
-#endif /* IPCONVERTOR_H_ */
