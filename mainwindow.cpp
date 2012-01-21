@@ -26,7 +26,6 @@ void MainWindow::on_spbSubnet_valueChanged(const QString &arg1)
 
 void MainWindow::update_view()
 {
-
     ipv.refresh(ui->txtStartIP->text().toStdString(), ui->spbSubnet->value());
 
     ui->lblBroadcastBin->setText(QString::fromStdString(ipv.b_getbroadcast()));

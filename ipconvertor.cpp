@@ -4,7 +4,7 @@
  * also has methods for displaying them in dotted notation, hex, and binary
  */
 
-#include "IPConvertor.h"
+#include "ipconvertor.h"
 
 IPConvertor::IPConvertor()
 {
@@ -103,4 +103,9 @@ string IPConvertor::addr2hex(struct in_addr var)
     unsigned char *hex = (unsigned char *)&var.s_addr;
     sprintf(str, "%02X:%02X:%02X:%02X", *hex, *(hex + 1), *(hex + 2), *(hex + 3));
     return str;
+}
+
+ostream & operator<< (ostream &out, IPConvertor &ipv)
+{
+    return out << ipv.toString();
 }

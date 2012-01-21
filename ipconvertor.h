@@ -24,6 +24,7 @@
 #include <string>
 #include <arpa/inet.h> //for inet_aton(), htonl(), ntohl()
 #include <sstream>
+#include <cstdio>
 
 using namespace std;
 
@@ -68,4 +69,6 @@ public:
     string b_getbroadcast(){ return addr2bin(broadcast); };
     string b_gethostmin(){ return addr2bin(hostmin); };
     string b_gethostmax(){ return addr2bin(hostmax); };
+
+    friend ostream & operator<<(ostream & out, IPConvertor & ipv);
 };
