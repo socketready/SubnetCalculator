@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPropertyAnimation>
 #include "ipconvertor.h"
 
 namespace Ui {
